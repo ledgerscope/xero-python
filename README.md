@@ -4,7 +4,7 @@
 [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/stargazers)
 ![total downloads](https://ruby-gem-downloads-badge.herokuapp.com/xero-ruby?type=total)
 
-The xero-python SDK makes it easy for developers to access Xero's APIs in their python code, and build robust applications and software using small business & general ledger accounting data.
+The xero-python SDK makes it easy for developers to access QuickBooks Online and Sage Business Cloud Accounting data via Xero's APIs in their **Python** code, and build robust applications and software using small business & general ledger accounting data.
 # Table of Contents
 - [API Client documentation](#api-client-documentation)
 - [Sample Applications](#sample-applications)
@@ -50,11 +50,12 @@ Sample apps can get you started quickly with simple auth flows and advanced usag
 
 <hr>
 
-## Xero Account Requirements
-- Create a [free Xero user account](https://www.xero.com/us/signup/api/)
-- Login to your Xero developer [dashboard](https://developer.xero.com/app/manage) and create an API application
+## Ledgerflow Account Requirements
+- Create a [free Ledgerflow user account](https://flow.ledgerscope.com/Account/Register)
+- Login to your Ledgerflow developer [dashboard](https://flow.ledgerscope.com/Partner/App) and create an API application
 - Copy the credentials from your API app and store them using a secure ENV variable strategy
 - Decide the [neccesary scopes](https://developer.xero.com/documentation/oauth2/scopes) for your app's functionality
+- The source accounting software values are 1004 to return QuickBooks Online data and 1009 to return Sage Business Cloud Accounting data
 
 # Installation
 To install this SDK in your project:
@@ -110,10 +111,10 @@ xero = oauth.remote_app(
     version="2",
     client_id=app.config["CLIENT_ID"],
     client_secret=app.config["CLIENT_SECRET"],
-    endpoint_url="https://api.xero.com/",
-    authorization_url="https://login.xero.com/identity/connect/authorize",
-    access_token_url="https://identity.xero.com/connect/token",
-    refresh_token_url="https://identity.xero.com/connect/token",
+    endpoint_url="https://xeroapi.ledgerscope.com/",
+    authorization_url="https://xeroapi.ledgerscope.com/--SOURCE ACCOUNTING SOFTWARE--/identity/connect/authorize",
+    access_token_url="https://xero.api.ledgerscope.com/--SOURCE ACCOUNTING SOFTWARE--/connect/token",
+    refresh_token_url="https://xero.api.ledgerscope.com/--SOURCE ACCOUNTING SOFTWARE--/connect/token",
     scope="offline_access openid profile email accounting.transactions "
     "accounting.transactions.read accounting.reports.read "
     "accounting.journals.read accounting.settings accounting.settings.read "
