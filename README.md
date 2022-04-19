@@ -4,7 +4,7 @@
 [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/stargazers)
 ![total downloads](https://ruby-gem-downloads-badge.herokuapp.com/xero-ruby?type=total)
 
-The xero-python SDK makes it easy for developers to access QuickBooks Online and Sage Business Cloud Accounting data via Xero's APIs in their **Python** code, and build robust applications and software using small business & general ledger accounting data.
+The xero-python SDK makes it easy for developers to access QuickBooks Online and Sage Accounting data via Xero's APIs in their **Python** code, and build robust applications and software using small business & general ledger accounting data.
 # Table of Contents
 - [API Client documentation](#api-client-documentation)
 - [Sample Applications](#sample-applications)
@@ -55,7 +55,7 @@ Sample apps can get you started quickly with simple auth flows and advanced usag
 - Login to your Ledgerflow developer [dashboard](https://flow.ledgerscope.com/Partner/App) and create an API application
 - Copy the credentials from your API app and store them using a secure ENV variable strategy
 - Decide the [neccesary scopes](https://developer.xero.com/documentation/oauth2/scopes) for your app's functionality
-- The source accounting software values are 1004 to return QuickBooks Online data and 1009 to return Sage Business Cloud Accounting data
+- The source accounting software values are 1004 to return QuickBooks Online data and 1009 to return Sage Accounting data
 
 # Installation
 To install this SDK in your project:
